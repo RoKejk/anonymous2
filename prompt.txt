@@ -1,0 +1,22 @@
+Perform Named Entity Recognition on the given text and image to identify entities.
+
+**Instructions**:
+1. Consider both the image and the text to identify entities with types: [{types}]
+2. Include entities that appear in the text even if they have no visual representation
+3. Output only the final JSON array inside `<entities>` tags, following this format:
+   - Each object must contain:
+     - `text`: Entity text (exactly as in input text)
+     - `type`: Entity type from [{types}]
+   - Include ALL recognized entities
+
+**Input**:
+Text: "{text}"
+Image: <image>
+
+**Output Format**:
+<entities>
+[
+  {{"text": "entity", "type": "TYPE"}},
+  ...
+]
+</entities>
